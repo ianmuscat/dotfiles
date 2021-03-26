@@ -4,13 +4,17 @@
 # ---
 
 # brew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/$USER/.zprofile 
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # GNU utils
 brew install coreutils findutils gnu-tar gnu-sed gawk gnutls gnu-indent gnu-getopt --with-default-names
+
 # other utils
 brew install wget
 brew install git
+
 # cli applications
 brew install 1password-cli
 brew install ansible
@@ -35,25 +39,18 @@ brew install tree
 brew install watch
 brew install wget
 brew install wireguard-tools
+
 # gui applications
-brew cask install 1password
-brew cask install burp-suite
-brew cask install db-browser-for-sqlite
-brew cask install docker
-brew cask install firefox
-brew cask install google-chrome
-brew cask install iterm2
-brew cask install iterm2
-brew cask install keybase
-brew cask install minikube
-brew cask install skype
-brew cask install slack
-brew cask install slack
-brew cask install spectacle
-brew cask install sublime-text
-brew cask install the-unarchiver
-brew cask install visual-studio-code
-brew cask install wireshark
+brew install --cask 1password
+brew install --cask burp-suite
+brew install --cask db-browser-for-sqlite
+brew install --cask docker
+brew install --cask firefox
+brew install --cask google-chrome
+brew install --cask iterm2
+brew install --cask keybase
+brew install --cask skype
+brew install --cask slack
 
 # configre git
 git config --global user.name "Ian Muscat"
