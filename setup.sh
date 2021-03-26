@@ -4,13 +4,17 @@
 # ---
 
 # brew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/juxhin.brigjaj/.zprofile 
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # GNU utils
 brew install coreutils findutils gnu-tar gnu-sed gawk gnutls gnu-indent gnu-getopt --with-default-names
+
 # other utils
 brew install wget
 brew install git
+
 # cli applications
 brew install 1password-cli
 brew install ansible
@@ -35,6 +39,7 @@ brew install tree
 brew install watch
 brew install wget
 brew install wireguard-tools
+
 # gui applications
 brew cask install 1password
 brew cask install burp-suite
@@ -43,11 +48,9 @@ brew cask install docker
 brew cask install firefox
 brew cask install google-chrome
 brew cask install iterm2
-brew cask install iterm2
 brew cask install keybase
 brew cask install minikube
 brew cask install skype
-brew cask install slack
 brew cask install slack
 brew cask install spectacle
 brew cask install sublime-text
