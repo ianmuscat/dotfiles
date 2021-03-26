@@ -49,10 +49,8 @@ brew install --cask firefox
 brew install --cask google-chrome
 brew install --cask iterm2
 brew install --cask keybase
-brew install --cask minikube
 brew install --cask skype
 brew install --cask slack
-brew install --cask spectacle
 
 # configre git
 git config --global user.name "Ian Muscat"
